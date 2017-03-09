@@ -1,0 +1,56 @@
+plugins {
+    id "com.jfrog.bintray" version "1.7.3"
+}
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'maven-publish'
+
+group 'net.arwix.astronomy'
+version '0.9'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url  "http://dl.bintray.com/v170nix/astronomy"
+    }
+}
+
+bintray {
+    user = 'v170nix'
+    key =  project.property('bintrayApiKey')
+    pkg {
+        repo = 'astronomy'
+        name = 'astronomy-lib-vsop87-a'
+        userOrg = user
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/v170nix/astronomy-vsop87.git'
+
+        version {
+            name = project.version
+        }
+
+        publications = ['MyPublication']
+
+    }
+}
+
+publishing {
+    publications {
+        MyPublication(MavenPublication) {
+            from components.java
+            groupId 'net.arwix.astronomy'
+            artifactId 'astronomy-vsop87-a'
+            version project.version
+        }
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'net.arwix.astronomy:astronomy-core:0.5'
+}
+

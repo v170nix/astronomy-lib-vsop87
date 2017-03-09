@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: annotations-13.0.jar astronomy-core-0.5.jar kotlin-stdlib-
+ 1.1.0.jar kotlin-runtime-1.1.0.jar
+Main-Class: 
+
