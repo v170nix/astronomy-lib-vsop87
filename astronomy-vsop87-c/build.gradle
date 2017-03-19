@@ -24,7 +24,7 @@ bintray {
     key =  project.property('bintrayApiKey')
     pkg {
         repo = 'astronomy'
-        name = 'astronomy-lib-vsop87-a'
+        name = 'astronomy-lib-vsop87-c'
         userOrg = user
         licenses = ['Apache-2.0']
         vcsUrl = 'https://github.com/v170nix/astronomy-vsop87.git'
@@ -43,7 +43,7 @@ publishing {
         MyPublication(MavenPublication) {
             from components.java
             groupId 'net.arwix.astronomy'
-            artifactId 'astronomy-vsop87-a'
+            artifactId 'astronomy-vsop87-c'
             version project.version
         }
     }
@@ -53,4 +53,3 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile 'net.arwix.astronomy:astronomy-core:0.62'
 }
-

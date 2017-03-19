@@ -1,3 +1,4 @@
 rootProject.name = 'astronomy-vsop87'
 include 'astronomy-vsop87-a'
+include 'astronomy-vsop87-c'
 
