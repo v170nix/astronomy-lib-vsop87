@@ -1,6 +1,5 @@
 package net.arwix.astronomy.vsop87;
 
-import net.arwix.astronomy.core.AstronomyMatrix;
 import net.arwix.astronomy.core.Constants;
 import net.arwix.astronomy.core.Epoch;
 import net.arwix.astronomy.core.Position;
@@ -101,7 +100,7 @@ public class AVsopTest {
         assertEquals("IdObject", new AMarsData().getIdObject(), VsopObject.MARS);
         Vector vector = position.getGeocentricEquatorialPosition(t, new AMarsData());
         assertEquals("Mars Geo Equatorial Position R.A. J2000", printLong(vector), "15:57:47.84");
-        vector = AstronomyMatrix.INSTANCE.createPrecession(Constants.T_J2000, t, AstronomyMatrix.Coordinates.EQUATORIAL).times(AstronomyMatrix.INSTANCE.createNutation(t)).times(vector);
+  //      vector = AstronomyMatrix.INSTANCE.createPrecession(Constants.T_J2000, t, AstronomyMatrix.Coordinates.EQUATORIAL).times(AstronomyMatrix.INSTANCE.createNutation(t)).times(vector);
 
         assertEquals("Mars Geo Equatorial Position DEC. J2000", printLat(vector), "-21 57 1.7");
         assertEquals("Mars Geo Equatorial Position r. J2000", getR(vector), "1.461438");
