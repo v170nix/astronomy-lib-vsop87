@@ -1,5 +1,5 @@
 group 'net.arwix.astronomy'
-version '0.66'
+version '0.67'
 
 apply plugin: 'java'
 
@@ -15,5 +15,5 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
-    compile 'net.arwix.astronomy:astronomy-core:0.66'
+    compile 'net.arwix.astronomy:astronomy-core:0.67'
 }

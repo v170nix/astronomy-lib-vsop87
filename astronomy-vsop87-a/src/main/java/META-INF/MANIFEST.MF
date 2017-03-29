@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Class-Path: astronomy-core-0.66.jar kotlin-runtime-1.1.0.jar kotlin-st
+Class-Path: astronomy-core-0.67.jar kotlin-runtime-1.1.0.jar kotlin-st
  dlib-1.1.0.jar annotations-13.0.jar
 Main-Class: 
 
