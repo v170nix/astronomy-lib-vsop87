@@ -1,5 +1,5 @@
 group 'net.arwix.astronomy'
-version '0.90'
+version '0.94'
 
 apply plugin: 'java'
 
