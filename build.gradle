@@ -1,11 +1,12 @@
 group 'net.arwix.astronomy'
-version '0.80'
+version '0.90'
 
 apply plugin: 'java'
 
 sourceCompatibility = 1.5
 
 repositories {
+    mavenLocal()
     mavenCentral()
     jcenter()
     maven {
@@ -15,5 +16,5 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
-    compile 'net.arwix.astronomy:astronomy-core:0.80'
+    compile 'net.arwix.astronomy:astronomy-core:0.94'
 }

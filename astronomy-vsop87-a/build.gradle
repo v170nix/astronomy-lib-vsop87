@@ -5,13 +5,14 @@ apply plugin: 'com.jfrog.bintray'
 apply plugin: 'maven-publish'
 
 group 'net.arwix.astronomy'
-version '0.80'
+version '0.91'
 
 apply plugin: 'java'
 
 sourceCompatibility = 1.5
 
 repositories {
+    mavenLocal()
     mavenCentral()
     jcenter()
     maven {
@@ -51,6 +52,6 @@ publishing {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
-    compile 'net.arwix.astronomy:astronomy-core:0.80'
+    compile 'net.arwix.astronomy:astronomy-core:0.94'
 }
 
